@@ -61,7 +61,7 @@ Out of which I chose logistic regression model
 
 Out of these I chose random forest model
 
-## Project Features 
+## Project Features
 
 
 ## How it benefits ?
