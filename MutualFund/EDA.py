@@ -11,10 +11,10 @@ pd.set_option('display.max_columns',None)
 
 def processed_data():
     # Read the datasets
-    df_demog = pd.read_excel(r"C:\Users\asus\Desktop\Direct-Marketing-Optimization\Data\Task_Data_Scientist_Dataset.xlsx", engine='openpyxl', sheet_name='Soc_Dem')
-    df_prod = pd.read_excel(r"C:\Users\asus\Desktop\Direct-Marketing-Optimization\Data\Task_Data_Scientist_Dataset.xlsx", engine='openpyxl', sheet_name='Products_ActBalance')
-    df_in_out = pd.read_excel(r"C:\Users\asus\Desktop\Direct-Marketing-Optimization\Data\Task_Data_Scientist_Dataset.xlsx", engine='openpyxl', sheet_name='Inflow_Outflow')
-    df_sales = pd.read_excel(r"C:\Users\asus\Desktop\Direct-Marketing-Optimization\Data\Task_Data_Scientist_Dataset.xlsx", engine='openpyxl', sheet_name='Sales_Revenues')
+    df_demog = pd.read_excel(r"Data/Financial dataset for propensity.xlsx", engine='openpyxl', sheet_name='Soc_Dem')
+    df_prod = pd.read_excel(r"Data/Financial dataset for propensity.xlsx", engine='openpyxl', sheet_name='Products_ActBalance')
+    df_in_out = pd.read_excel(r"Data/Financial dataset for propensity.xlsx", engine='openpyxl', sheet_name='Inflow_Outflow')
+    df_sales = pd.read_excel(r"Data/Financial dataset for propensity.xlsx", engine='openpyxl', sheet_name='Sales_Revenues')
 
     # Merge the datasets
     df = pd.merge(df_demog, df_prod, how="left", on=["Client"])

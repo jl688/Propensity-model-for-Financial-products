@@ -105,7 +105,7 @@ param_grid_rd = {
 # Saving model to disk for revenue prediction
 pickle.dump(model_rf, open('model_rf_revenue_cl.pkl', 'wb'))
 
-df_test = pd.read_excel(r"C:\Users\asus\Desktop\Direct-Marketing-Optimization\Data\df_test.xlsx", engine='openpyxl')
+df_test = pd.read_excel(r"Data/testDatasetCreation/test.xlsx", engine='openpyxl')
 
 df_test_client = df_test["Client"]
 
@@ -147,10 +147,10 @@ df_pred_cl[df_pred_cl['ProbablitySaleCL'] > 0.5]
 
 # df_pred_cl.to_excel("C:\Open source softwares\propensityModel_Financials\Data\df_pred.xlsx")
 
-df_pred = pd.read_excel(r"C:\Open source softwares\propensityModel_Financials\Data\df_pred.xlsx", engine='openpyxl')
+df_pred = pd.read_excel(r"Data/df_pred.xlsx", engine='openpyxl')
 df_pred = pd.merge(df_pred, df_pred_cl, how="left", on=["Client"])
 # adding in main XLSX file
 
-file_path = "C:\Open source softwares\propensityModel_Financials\Data\df_pred.xlsx"
+file_path = "Data/df_pred.xlsx"
 with pd.ExcelWriter(file_path, engine="openpyxl", mode='a', if_sheet_exists="replace") as writer:
     df_pred.to_excel(writer, index=False)

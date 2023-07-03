@@ -6,9 +6,9 @@ st.set_page_config(page_title='Model output')
 st.header('Model output for both products')
 
 
-predicted_dataset = r'C:\Open source softwares\propensityModel_Financials\Data\df_pred.xlsx'
-test_dataset = r'C:\Open source softwares\propensityModel_Financials\Data\testDatasetCreation\test.xlsx'
-recommended_dataset = r'C:\Open source softwares\propensityModel_Financials\Data\df_final_recommend.xlsx'
+predicted_dataset = r'Data/df_pred.xlsx'
+test_dataset = r'Data/df_test.xlsx'
+recommended_dataset = r'Data/df_final_recommend.xlsx'
 
 st.subheader('See Predicted values')
 df_predicted = pd.read_excel(predicted_dataset)

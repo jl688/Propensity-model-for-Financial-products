@@ -106,7 +106,7 @@ eli5.explain_weights(model_rf.named_steps['m'], top=15, feature_names=cols_reg)
 # Saving model to disk for revenue prediction
 pickle.dump(model_rf, open('model_rf_revenue_mf.pkl', 'wb'))
 
-df_test = pd.read_excel("C:\Open source softwares\propensityModel_Financials\Data\df_test.xlsx",engine='openpyxl')
+df_test = pd.read_excel("Data/testDatasetCreation/test.xlsx",engine='openpyxl')
 
 df_test_client = df_test["Client"]
 
@@ -146,6 +146,5 @@ df_pred = pd.DataFrame({'Client': df_test_client, 'ProbablitySaleMF': y_pred_lr_
 
 df_pred[df_pred['ProbablitySaleMF'] > 0.5]
 
-df_pred.to_excel("C:\Open source softwares\propensityModel_Financials\Data\df_pred.xlsx")
+df_pred.to_excel("Data/df_pred.xlsx")
 
-print("hello")
