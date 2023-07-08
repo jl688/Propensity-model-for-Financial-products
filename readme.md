@@ -75,12 +75,32 @@ Out of these I chose random forest model
 
 A model of this nature can be applied almost every field where marketing and sales is a concern. This model can also revolutionise Digital marketing because it would reduce the cost significantly after advertisers obtains enough data to train the model.
 
+## HOW TO SETUP LOCALLY ?
+##### PYTHON VERSION 3.10 IS USED
 
+Clone the project
 
-## **HOW TO SETUP ?**
-  
-1. Python version 3.10 is used 
-2. Enter following command to install packages : `pip install -r requirements.txt`
+```bash
+  git clone https://github.com/kanha-gupta/Propensity-model-for-Financial-products.git
+```
+
+Go to the project directory
+
+```bash
+  cd Propensity-model-for-Financial-products
+```
+
+Install packages
+
+```bash
+  pip install -r requirements.txt
+```
+
+To Run Streamlit server
+
+```bash
+  python3 -m streamlit run deployment.py
+```
 
 ## ABOUT DATASET 
 
