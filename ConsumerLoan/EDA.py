@@ -11,20 +11,6 @@ pd.set_option('display.max_columns',None)
 # 1) Assume that to have a bank account with the bank, clients must be at least 10 years old, as even a student account requires a minimum age of 10.
 # 2) Impute the age by adding 10 years to the tenure of the client.
 def process_data():
-    # Reading the datasets
-    # df_demog = pd.read_excel(
-    #     r'Data/Financial dataset for propensity.xlsx', engine='openpyxl',
-    #     sheet_name='Soc_Dem')
-    # df_prod = pd.read_excel(
-    #     r'Data/Financial dataset for propensity.xlsx', engine='openpyxl',
-    #     sheet_name='Products_ActBalance')
-    # df_in_out = pd.read_excel(
-    #     r'Data/Financial dataset for propensity.xlsx', engine='openpyxl',
-    #     sheet_name='Inflow_Outflow')
-    # df_sales = pd.read_excel(
-    #     r"Data/Financial dataset for propensity.xlsx", engine='openpyxl',
-    #     sheet_name='Sales_Revenues')
-
     file_path = 'Data/Financial dataset for propensity.xlsx'
 
     df_demog = pd.read_excel(file_path, engine='openpyxl', sheet_name='Soc_Dem')
